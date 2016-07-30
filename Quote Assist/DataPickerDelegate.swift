@@ -11,7 +11,7 @@ import UIKit
 
 extension InputViewController{
     
-    
+
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -54,6 +54,45 @@ extension InputViewController{
     
     //Implemente this function to refresh inputView
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-
+        
+        switch pickerView.tag {
+        case 0: shippingTermChanged()
+            
+        case 1: currencyChanged()
+            
+        case 2: priceUnitChanged()
+            
+        default:
+            break
+        }
+    }
+    
+    func shippingTermChanged(){
+        print("shippingterm changed")
+        
+        let inputShippingTerm = Constant().shippingTermArray[inputShippingTermPicker.selectedRowInComponent(0)]
+        let outputShippingTerm = Constant().shippingTermArray[outputShippingTermPicker.selectedRowInComponent(0)]
+        
+        switch (inputShippingTerm, outputShippingTerm) {
+            case ("FOB","FOB"):
+                break
+            case ("FOB","CIF"):
+                break
+            case ("CIF","FOB"):
+                break
+            case ("CIF","CIF"):
+                break
+            default:
+                break
+        }
+    }
+    
+    func currencyChanged(){
+        print("currency changed")
+        
+    }
+    
+    func priceUnitChanged(){
+        print("price unit changed")
     }
 }

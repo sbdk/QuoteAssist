@@ -9,8 +9,7 @@
 import Foundation
 
 struct Constant {
-    
-    let currencyArray = ["RMB", "USD", "HKD"]
     let shippingTermArray = ["FOB", "CIF"]
+    let currencyArray = ["CNY", "USD", "HKD"]
     let priceUnitArray = ["/M", "/YD", "/KG", "/Ton"]
 }
