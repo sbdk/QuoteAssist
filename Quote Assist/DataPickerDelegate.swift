@@ -75,13 +75,17 @@ extension InputViewController{
         
         switch (inputShippingTerm, outputShippingTerm) {
             case ("FOB","FOB"):
-                break
+            shippingTermLineView.lineLayer.strokeColor = UIColor.greenColor().CGColor
+            
             case ("FOB","CIF"):
-                break
+            shippingTermLineView.lineLayer.strokeColor = UIColor.redColor().CGColor
+            
             case ("CIF","FOB"):
-                break
+                shippingTermLineView.lineLayer.strokeColor = UIColor.redColor().CGColor
+            
             case ("CIF","CIF"):
-                break
+                shippingTermLineView.lineLayer.strokeColor = UIColor.greenColor().CGColor
+            
             default:
                 break
         }

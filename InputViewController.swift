@@ -32,6 +32,14 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     //UIButtons
     @IBOutlet weak var moreInfoButton: UIButton!
     
+    //Three status check lines
+    @IBOutlet weak var shippingTermLineRect: ShippingTermLine!
+
+    
+    
+    var shippingTermLineView: ShippingTermLine!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +56,9 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
         
         inputDoneButton.backgroundColor = UIColor.orangeColor()
         inputDoneButton.layer.cornerRadius = 30.0
+        moreInfoButton.layer.cornerRadius = 30.0
+        
+        addThreeLineView()
         
     }
     
@@ -69,6 +80,7 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
             self.inputDoneButton.alpha = 0
             self.outputBackgroundView.alpha = 1
         })
+    
     }
     
     
@@ -77,28 +89,18 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
         
         let moreInfoView = self.storyboard?.instantiateViewControllerWithIdentifier("MoreInfoTableView") as! MoreInfoViewController
         navigationController?.pushViewController(moreInfoView, animated: true)
-        
-//        moreInfoView.modalPresentationStyle = .Popover
-//        moreInfoView.popoverPresentationController?.delegate = self
-//        
-//        self.presentViewController(moreInfoView, animated: true, completion: nil)
-//        if let popView = moreInfoView.popoverPresentationController{
-//            let sourceView = sender as! UIView
-//            popView.sourceView = sourceView
-//            popView.sourceRect = sourceView.bounds
-//            popView.permittedArrowDirections = .Down
-//            moreInfoView.preferredContentSize = CGSizeMake(self.view.bounds.width - 30, self.view.bounds.height - 60)
-//        }
-
-        
+     
     }
-//    
-//    //Necessary configration for prpoperly present helpView
-//    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-//        return UIModalPresentationStyle.None
-//    }
     
-    
-    
+    func addThreeLineView() {
+            
+        // Initiate shippingTermLineView
+        shippingTermLineView = ShippingTermLine(frame: self.shippingTermLineRect.frame)
+        
+        view.addSubview(shippingTermLineView)
+        
+        // Animate the drawing of the line over the course of 1 second
+        shippingTermLineView.animateLine(2)
+    }
     
 }
