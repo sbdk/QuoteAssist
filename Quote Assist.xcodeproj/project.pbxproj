@@ -17,7 +17,7 @@
 		BE1E200B1D4A994A00920D5F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E200A1D4A994A00920D5F /* Constant.swift */; };
 		BE1E200D1D4AB18400920D5F /* DataPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E200C1D4AB18400920D5F /* DataPickerDelegate.swift */; };
 		BEE7F3C91D4C14AD008F5010 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE7F3C81D4C14AD008F5010 /* MoreInfoViewController.swift */; };
-		BEFD16D21D4FC29E002D759C /* ShippingTermLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD16D11D4FC29E002D759C /* ShippingTermLine.swift */; };
+		BEFD16D21D4FC29E002D759C /* StatusLinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD16D11D4FC29E002D759C /* StatusLinesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		BE1E200A1D4A994A00920D5F /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BE1E200C1D4AB18400920D5F /* DataPickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPickerDelegate.swift; sourceTree = "<group>"; };
 		BEE7F3C81D4C14AD008F5010 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
-		BEFD16D11D4FC29E002D759C /* ShippingTermLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingTermLine.swift; sourceTree = "<group>"; };
+		BEFD16D11D4FC29E002D759C /* StatusLinesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLinesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				BE1E1FE31D4A803400920D5F /* LaunchScreen.storyboard */,
 				BE1E1FE61D4A803400920D5F /* Info.plist */,
 				BE1E200A1D4A994A00920D5F /* Constant.swift */,
-				BEFD16D11D4FC29E002D759C /* ShippingTermLine.swift */,
+				BEFD16D11D4FC29E002D759C /* StatusLinesView.swift */,
 			);
 			path = "Quote Assist";
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 				BE1E20091D4A985900920D5F /* InputViewController.swift in Sources */,
 				BE1E200B1D4A994A00920D5F /* Constant.swift in Sources */,
 				BE1E200D1D4AB18400920D5F /* DataPickerDelegate.swift in Sources */,
-				BEFD16D21D4FC29E002D759C /* ShippingTermLine.swift in Sources */,
+				BEFD16D21D4FC29E002D759C /* StatusLinesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

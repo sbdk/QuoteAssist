@@ -142,51 +142,47 @@
                                     <action selector="moreInfoButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHG-cn-Jft"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbd-f1-wML" customClass="ShippingTermLine" customModule="Quote_Assist" customModuleProvider="target">
-                                <rect key="frame" x="-30" y="379" width="160" height="125"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvy-ag-Oco" customClass="StatusLinesView" customModule="Quote_Assist" customModuleProvider="target">
+                                <rect key="frame" x="15" y="379" width="290" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dfF-Ws-l96" firstAttribute="top" secondItem="ZfL-CX-TvJ" secondAttribute="bottom" constant="-30" id="1bI-JG-EHE"/>
                             <constraint firstItem="ZfL-CX-TvJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.45" id="1sS-uu-R1H"/>
                             <constraint firstAttribute="trailing" secondItem="jwS-PM-FRG" secondAttribute="trailing" id="8ZM-AC-QVc"/>
-                            <constraint firstItem="jbd-f1-wML" firstAttribute="bottom" secondItem="wiv-Dz-Nrm" secondAttribute="bottom" id="D6V-Dg-7TP"/>
+                            <constraint firstItem="Hvy-ag-Oco" firstAttribute="bottom" secondItem="wiv-Dz-Nrm" secondAttribute="bottom" constant="-30" id="8pP-tr-4f8"/>
+                            <constraint firstItem="Hvy-ag-Oco" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EAI-pr-TDr"/>
                             <constraint firstItem="ZfL-CX-TvJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F1y-Lr-e6A"/>
                             <constraint firstAttribute="trailing" secondItem="InO-Rx-ev0" secondAttribute="trailing" id="Jc5-bd-w5H"/>
                             <constraint firstItem="OxK-bG-aRb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LPe-wO-EgX"/>
                             <constraint firstItem="dfF-Ws-l96" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OsS-Fd-6Sf"/>
+                            <constraint firstItem="Hvy-ag-Oco" firstAttribute="top" secondItem="ZKq-tl-q8f" secondAttribute="bottom" id="PNz-hS-YHr"/>
                             <constraint firstItem="ZfL-CX-TvJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rap-jF-2a0"/>
-                            <constraint firstItem="jbd-f1-wML" firstAttribute="bottom" secondItem="wiv-Dz-Nrm" secondAttribute="bottom" id="Rv6-ky-CcV"/>
                             <constraint firstItem="ZfL-CX-TvJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="SUa-Tm-zbQ"/>
-                            <constraint firstItem="jbd-f1-wML" firstAttribute="top" secondItem="ZKq-tl-q8f" secondAttribute="bottom" id="TAd-7c-NDf"/>
-                            <constraint firstItem="jbd-f1-wML" firstAttribute="bottom" secondItem="wiv-Dz-Nrm" secondAttribute="bottom" id="TAs-kr-qwQ"/>
-                            <constraint firstItem="jwS-PM-FRG" firstAttribute="top" secondItem="jbd-f1-wML" secondAttribute="bottom" constant="20" id="WeJ-ft-7Xq"/>
+                            <constraint firstItem="wiv-Dz-Nrm" firstAttribute="leading" secondItem="Hvy-ag-Oco" secondAttribute="trailing" constant="-30" id="U0i-1s-lwM"/>
                             <constraint firstItem="jwS-PM-FRG" firstAttribute="top" secondItem="wiv-Dz-Nrm" secondAttribute="bottom" constant="-10" id="Ws3-X6-7IM"/>
+                            <constraint firstItem="Hvy-ag-Oco" firstAttribute="centerX" secondItem="ZKq-tl-q8f" secondAttribute="centerX" id="ZPd-vO-iYJ"/>
                             <constraint firstItem="InO-Rx-ev0" firstAttribute="top" secondItem="ZfL-CX-TvJ" secondAttribute="bottom" id="bSB-KA-tS7"/>
                             <constraint firstItem="wiv-Dz-Nrm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gQS-fd-MRd"/>
-                            <constraint firstItem="jbd-f1-wML" firstAttribute="top" secondItem="InO-Rx-ev0" secondAttribute="bottom" id="kMO-Iu-V43"/>
                             <constraint firstAttribute="trailing" secondItem="ZfL-CX-TvJ" secondAttribute="trailing" id="kyu-Dz-rb9"/>
+                            <constraint firstItem="Hvy-ag-Oco" firstAttribute="trailing" secondItem="RAj-gC-hfU" secondAttribute="trailing" id="lrF-0P-msk"/>
                             <constraint firstItem="jwS-PM-FRG" firstAttribute="top" secondItem="wiv-Dz-Nrm" secondAttribute="bottom" constant="20" id="rVO-Pl-f3S"/>
                             <constraint firstItem="InO-Rx-ev0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ufj-sL-XfR"/>
                             <constraint firstItem="jwS-PM-FRG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="usD-FD-MIO"/>
                             <constraint firstItem="jwS-PM-FRG" firstAttribute="top" secondItem="InO-Rx-ev0" secondAttribute="bottom" constant="100" id="vHm-2c-Gdr"/>
                             <constraint firstItem="dfF-Ws-l96" firstAttribute="top" secondItem="ZfL-CX-TvJ" secondAttribute="bottom" constant="-19" id="vzK-o6-tMU"/>
-                            <constraint firstItem="wiv-Dz-Nrm" firstAttribute="leading" secondItem="jbd-f1-wML" secondAttribute="trailing" id="wtK-QU-fWl"/>
+                            <constraint firstItem="Hvy-ag-Oco" firstAttribute="top" secondItem="saY-xh-xgs" secondAttribute="bottom" id="wvb-ak-lhF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jwS-PM-FRG" secondAttribute="bottom" id="y7G-7u-38B"/>
-                            <constraint firstItem="jbd-f1-wML" firstAttribute="centerX" secondItem="ZKq-tl-q8f" secondAttribute="centerX" id="yd7-bb-04O"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Rap-jF-2a0"/>
                                 <exclude reference="vzK-o6-tMU"/>
-                                <exclude reference="D6V-Dg-7TP"/>
-                                <exclude reference="Rv6-ky-CcV"/>
-                                <exclude reference="TAs-kr-qwQ"/>
-                                <exclude reference="kMO-Iu-V43"/>
+                                <exclude reference="PNz-hS-YHr"/>
+                                <exclude reference="ZPd-vO-iYJ"/>
+                                <exclude reference="U0i-1s-lwM"/>
                                 <exclude reference="rVO-Pl-f3S"/>
                             </mask>
                         </variation>
@@ -205,7 +201,7 @@
                         <outlet property="outputPriceUnitPicker" destination="RAj-gC-hfU" id="Qz4-Av-JI0"/>
                         <outlet property="outputShippingTermPicker" destination="ZKq-tl-q8f" id="xQ8-Ry-U5n"/>
                         <outlet property="priceInputTextField" destination="Q9i-0e-p8v" id="ojJ-rB-RH5"/>
-                        <outlet property="shippingTermLineRect" destination="jbd-f1-wML" id="Qbp-4b-oqQ"/>
+                        <outlet property="statusLinesView" destination="Hvy-ag-Oco" id="wAV-nU-RG9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

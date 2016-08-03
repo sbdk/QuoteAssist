@@ -33,12 +33,10 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     @IBOutlet weak var moreInfoButton: UIButton!
     
     //Three status check lines
-    @IBOutlet weak var shippingTermLineRect: ShippingTermLine!
-
+    @IBOutlet weak var statusLinesView: StatusLinesView!
     
-    
-    var shippingTermLineView: ShippingTermLine!
-    
+    //View Object of StatusLinesView Class
+    var linesView: StatusLinesView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,12 +93,12 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     func addThreeLineView() {
             
         // Initiate shippingTermLineView
-        shippingTermLineView = ShippingTermLine(frame: self.shippingTermLineRect.frame)
+        linesView = StatusLinesView(frame: self.statusLinesView.frame)
         
-        view.addSubview(shippingTermLineView)
+        view.addSubview(linesView)
         
         // Animate the drawing of the line over the course of 1 second
-        shippingTermLineView.animateLine(2)
+        linesView.animateLine(2)
     }
     
 }
