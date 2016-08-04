@@ -24,6 +24,8 @@ class StatusLinesView: UIView {
     let priceUnitLinePath = UIBezierPath()
     let priceUnitLineLayer = CAShapeLayer()
     
+    var animateProgress = CATransaction()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
@@ -59,7 +61,7 @@ class StatusLinesView: UIView {
         lineLayer.path = linePath.CGPath
         lineLayer.strokeColor = UIColor.greenColor().CGColor
         lineLayer.fillColor = UIColor.clearColor().CGColor
-        lineLayer.lineWidth = 3.0
+        lineLayer.lineWidth = 6.0
         lineLayer.strokeEnd = 0.0
         layer.addSublayer(lineLayer)
     }
@@ -88,5 +90,6 @@ class StatusLinesView: UIView {
         shippingTermLineLayer.addAnimation(animation, forKey: "shippingTerm")
         currencyLineLayer.addAnimation(animation, forKey: "currency")
         priceUnitLineLayer.addAnimation(animation, forKey: "priceUnit")
+        
     }
 }

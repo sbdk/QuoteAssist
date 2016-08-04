@@ -57,6 +57,7 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
         moreInfoButton.layer.cornerRadius = 30.0
         
         addThreeLineView()
+        linesView.addSubview(moreInfoButton)
         
     }
     
@@ -85,8 +86,12 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     @IBAction func moreInfoButtonTouched(sender: AnyObject) {
         
         
-        let moreInfoView = self.storyboard?.instantiateViewControllerWithIdentifier("MoreInfoTableView") as! MoreInfoViewController
-        navigationController?.pushViewController(moreInfoView, animated: true)
+        let moreInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MoreInfoTableView") as! MoreInfoViewController
+        moreInfoViewController.inputPriceUnit = Constant().priceUnitArray[inputPriceUnitPicker.selectedRowInComponent(0)] ?? ""
+        moreInfoViewController.inputCurrency = Constant().currencyArray[inputCurrencyPicker.selectedRowInComponent(0)] ?? ""
+        moreInfoViewController.outputCurrency = Constant().currencyArray[outputCurrencyPicker.selectedRowInComponent(0)] ?? ""
+        navigationController?.pushViewController(moreInfoViewController, animated: true)
+        
      
     }
     
@@ -97,8 +102,20 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
         
         view.addSubview(linesView)
         
-        // Animate the drawing of the line over the course of 1 second
+        
+                
+        UIView.animateWithDuration(0.6, animations: {
+            self.moreInfoButton.transform = CGAffineTransformMakeScale(1.5, 1.5)
+            }, completion: { finish in
+                UIView.animateWithDuration(0.6){
+                    self.moreInfoButton.transform = CGAffineTransformIdentity
+                }
+        })
+
+        // Animate the drawing of the line over the course of 2 second
         linesView.animateLine(2)
+        
+        
     }
     
 }
