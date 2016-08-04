@@ -9,16 +9,21 @@
 import UIKit
 import Foundation
 
-class MoreInfoViewController: UITableViewController, UITextFieldDelegate {
+class MoreInfoViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate {
     
     @IBOutlet weak var shippingCostTextField: UITextField!
     @IBOutlet weak var shippingQtyTextField: UITextField!
     @IBOutlet weak var currencyFactorTextField: UITextField!
+    @IBOutlet weak var goodsWidthTextField: UITextField!
+    @IBOutlet weak var goodsWeightTextField: UITextField!
 
     
     @IBOutlet weak var shippingQtyUnit: UILabel!
     @IBOutlet weak var baseCurrency: UILabel!
     @IBOutlet weak var resultCurrency: UILabel!
+
+    @IBOutlet weak var goodsWidthPicker: UIPickerView!
+    @IBOutlet weak var goodsWeightPicker: UIPickerView!
 
     
     var inputPriceUnit: String!
@@ -32,8 +37,12 @@ class MoreInfoViewController: UITableViewController, UITextFieldDelegate {
         baseCurrency.text = outputCurrency
         resultCurrency.text = inputCurrency
         
+        //Set picker views delegate
+        goodsWidthPicker.delegate = self
+        goodsWeightPicker.delegate = self
+        
         //Set all textField delegate and keyboard type
-        let textFieldSet: Set<UITextField> = [shippingCostTextField, shippingQtyTextField, currencyFactorTextField]
+        let textFieldSet: Set<UITextField> = [shippingCostTextField, shippingQtyTextField, currencyFactorTextField, goodsWidthTextField, goodsWeightTextField]
         configTextFields(textFieldSet)
     }
     

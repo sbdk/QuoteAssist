@@ -12,4 +12,6 @@ struct Constant {
     let shippingTermArray = ["FOB", "CIF"]
     let currencyArray = ["CNY", "USD", "HKD"]
     let priceUnitArray = ["/M", "/YD", "/KG", "/Ton"]
+    let widthUnitArray = ["CM", "Inch"]
+    let weightUnitArray = ["GSM", "G/M", "G/YD"]
 }

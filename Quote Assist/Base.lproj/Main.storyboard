@@ -407,16 +407,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Width:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYc-6P-vpZ">
-                                                    <rect key="frame" x="18" y="48" width="51" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Width:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYc-6P-vpZ">
+                                                    <rect key="frame" x="18" y="39" width="51" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="067-Zx-gZt">
+                                                    <rect key="frame" x="232" y="4" width="70" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="Tdp-3R-cZ9"/>
+                                                    </constraints>
+                                                </pickerView>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vm9-wP-sbQ">
+                                                    <rect key="frame" x="109" y="35" width="100" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="iyU-aG-To6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="067-Zx-gZt" firstAttribute="height" secondItem="zl0-c3-0kV" secondAttribute="height" multiplier="0.9" id="5rb-OU-i7P"/>
+                                                <constraint firstItem="067-Zx-gZt" firstAttribute="centerY" secondItem="zl0-c3-0kV" secondAttribute="centerY" id="AXz-Qp-cSH"/>
                                                 <constraint firstItem="EYc-6P-vpZ" firstAttribute="centerY" secondItem="zl0-c3-0kV" secondAttribute="centerY" id="QyW-Ds-wh2"/>
                                                 <constraint firstItem="EYc-6P-vpZ" firstAttribute="leading" secondItem="zl0-c3-0kV" secondAttribute="leadingMargin" constant="10" id="gSH-pv-DQv"/>
+                                                <constraint firstItem="067-Zx-gZt" firstAttribute="leading" secondItem="vm9-wP-sbQ" secondAttribute="trailing" constant="23" id="oDd-nL-ndK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="067-Zx-gZt" secondAttribute="trailing" constant="10" id="qW4-sb-wPG"/>
+                                                <constraint firstItem="vm9-wP-sbQ" firstAttribute="centerY" secondItem="zl0-c3-0kV" secondAttribute="centerY" id="rov-Qc-AaB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -427,15 +446,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLM-QG-WFO">
-                                                    <rect key="frame" x="18" y="48" width="59" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLM-QG-WFO">
+                                                    <rect key="frame" x="18" y="39" width="59" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="br4-Hh-eVV">
+                                                    <rect key="frame" x="232" y="5" width="70" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="EZm-sh-2Ek"/>
+                                                    </constraints>
+                                                </pickerView>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-2Y-tDt">
+                                                    <rect key="frame" x="109" y="35" width="100" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="agv-F8-QZo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="6fk-2Y-tDt" firstAttribute="centerY" secondItem="Dfu-Xl-hjY" secondAttribute="centerY" id="8Tz-Xu-yX9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="br4-Hh-eVV" secondAttribute="trailing" constant="10" id="D96-gb-Nru"/>
                                                 <constraint firstItem="kLM-QG-WFO" firstAttribute="leading" secondItem="Dfu-Xl-hjY" secondAttribute="leadingMargin" constant="10" id="O2f-Ud-J9a"/>
+                                                <constraint firstItem="br4-Hh-eVV" firstAttribute="leading" secondItem="6fk-2Y-tDt" secondAttribute="trailing" constant="23" id="oD4-KE-n0W"/>
+                                                <constraint firstItem="br4-Hh-eVV" firstAttribute="centerY" secondItem="Dfu-Xl-hjY" secondAttribute="centerY" id="uDI-8X-yQI"/>
+                                                <constraint firstItem="br4-Hh-eVV" firstAttribute="height" secondItem="Dfu-Xl-hjY" secondAttribute="height" multiplier="0.9" id="yvO-0z-Ijg"/>
                                                 <constraint firstItem="kLM-QG-WFO" firstAttribute="centerY" secondItem="Dfu-Xl-hjY" secondAttribute="centerY" id="zVk-WT-LB0"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -453,6 +491,10 @@
                     <connections>
                         <outlet property="baseCurrency" destination="hxz-06-tef" id="czJ-Md-7tf"/>
                         <outlet property="currencyFactorTextField" destination="c71-Dc-wHg" id="MI5-a3-nja"/>
+                        <outlet property="goodsWeightPicker" destination="br4-Hh-eVV" id="2C1-6X-jTe"/>
+                        <outlet property="goodsWeightTextField" destination="6fk-2Y-tDt" id="tun-rQ-RfN"/>
+                        <outlet property="goodsWidthPicker" destination="067-Zx-gZt" id="umf-yK-A3f"/>
+                        <outlet property="goodsWidthTextField" destination="vm9-wP-sbQ" id="Jcc-Rh-wo4"/>
                         <outlet property="resultCurrency" destination="acl-eM-HtH" id="cJi-XS-WuI"/>
                         <outlet property="shippingCostTextField" destination="iEZ-EQ-0Ns" id="fhk-Gf-BML"/>
                         <outlet property="shippingQtyTextField" destination="gMH-Fk-1Z3" id="caf-MH-2hR"/>
