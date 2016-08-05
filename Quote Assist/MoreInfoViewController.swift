@@ -14,6 +14,9 @@ class MoreInfoViewController: UITableViewController, UITextFieldDelegate, UIPick
     @IBOutlet weak var shippingCostTextField: UITextField!
     @IBOutlet weak var shippingQtyTextField: UITextField!
     @IBOutlet weak var currencyFactorTextField: UITextField!
+    @IBOutlet weak var currencyFactorUSDTextField: UITextField!
+    
+    
     @IBOutlet weak var goodsWidthTextField: UITextField!
     @IBOutlet weak var goodsWeightTextField: UITextField!
 
@@ -21,10 +24,11 @@ class MoreInfoViewController: UITableViewController, UITextFieldDelegate, UIPick
     @IBOutlet weak var shippingQtyUnit: UILabel!
     @IBOutlet weak var baseCurrency: UILabel!
     @IBOutlet weak var resultCurrency: UILabel!
+    @IBOutlet weak var resultCurrencyForUSD: UILabel!
+
 
     @IBOutlet weak var goodsWidthPicker: UIPickerView!
     @IBOutlet weak var goodsWeightPicker: UIPickerView!
-
     
     var inputPriceUnit: String!
     var outputCurrency: String!
@@ -41,8 +45,15 @@ class MoreInfoViewController: UITableViewController, UITextFieldDelegate, UIPick
         
         //Set label's current text according to input & output dataPicker setting
         shippingQtyUnit.text = String(inputPriceUnit.characters.dropFirst())
+        
+        //Here base currency is the left side unit, 
+        //resultCurrency is the right side unit
+        
+        /*In reality and most of the time, USD & EUR will be the output currency, most quotes are based on these currency. Meanwhile, USD & EUR are stronger currency than others, makes them sutiable for a base currency in currency convert*/
+        
         baseCurrency.text = outputCurrency
         resultCurrency.text = inputCurrency
+        resultCurrencyForUSD.text = inputCurrency
         
         //Set pickerView's selected value according to most recent stored record
         let widthIndex = Constant().widthUnitArray.indexOf(appDelegate.goodsSpecsInfo["widthUnit"]!) ?? 0
@@ -54,16 +65,31 @@ class MoreInfoViewController: UITableViewController, UITextFieldDelegate, UIPick
         shippingCostTextField.text = String(appDelegate.totalShippingCost)
         shippingQtyTextField.text = String(appDelegate.totalShippingQty)
         currencyFactorTextField.text = appDelegate.currencyFactor["factor"]
+        currencyFactorUSDTextField.text = appDelegate.currencyFactorUSD["factor"]
         goodsWidthTextField.text = appDelegate.goodsSpecsInfo["width"]
         goodsWeightTextField.text = appDelegate.goodsSpecsInfo["weight"]
         
         //Set all textField delegate and keyboard type
-        let textFieldSet: Set<UITextField> = [shippingCostTextField, shippingQtyTextField, currencyFactorTextField, goodsWidthTextField, goodsWeightTextField]
+        let textFieldSet: Set<UITextField> = [shippingCostTextField, shippingQtyTextField, currencyFactorTextField, currencyFactorUSDTextField, goodsWidthTextField, goodsWeightTextField]
         configTextFields(textFieldSet)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    //If output currency it other than USD,
+    //user need to provide USD cureency factor as well
+    //Since gloabl shipping cost are based in USD
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        switch section {
+        case 1 where self.outputCurrency == "USD":
+            return 1
+        default:
+            return 2
+        }
     }
     
     
@@ -147,6 +173,8 @@ class MoreInfoViewController: UITableViewController, UITextFieldDelegate, UIPick
         appDelegate.currencyFactor["baseCurrency"] = baseCurrency.text!
         appDelegate.currencyFactor["resultCurrency"] = resultCurrency.text!
         appDelegate.currencyFactor["factor"] = currencyFactorTextField.text! ?? "0"
+        appDelegate.currencyFactorUSD["resultCurrency"] = resultCurrencyForUSD.text! ?? ""
+        appDelegate.currencyFactorUSD["factor"] = currencyFactorUSDTextField.text! ?? "0"
         
         // 3 - Store GoodsSpecs info
         appDelegate.goodsSpecsInfo["widthUnit"] = Constant().widthUnitArray[goodsWidthPicker.selectedRowInComponent(0)]

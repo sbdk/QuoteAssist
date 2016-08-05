@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var totalShippingQty: Double = 0.0
     
     var currencyFactor: [String:String] = ["baseCurrency":"", "resultCurrency":"", "factor":"0"]
+    var currencyFactorUSD: [String:String] = ["resultCurrency":"", "factor":"0"]
     var goodsSpecsInfo: [String:String] = ["widthUnit":"", "weightUnit":"", "width":"0", "weight":"0"]
     
     

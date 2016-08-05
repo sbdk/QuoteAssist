@@ -62,13 +62,13 @@ extension MoreInfoViewController{
     
     func widthUnitChanged(){
         print("widthUnit changed")
-        
+        storeAllProvidedInfo()
         let selectedWidthUnit = Constant().widthUnitArray[goodsWidthPicker.selectedRowInComponent(0)]
         }
     
     func weightUnitChanged(){
         print("weightUnit changed")
-        
+        storeAllProvidedInfo()
         let selectedWeightUnit = Constant().weightUnitArray[goodsWeightPicker.selectedRowInComponent(0)]
     }
 }
