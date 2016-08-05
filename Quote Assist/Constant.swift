@@ -10,8 +10,8 @@ import Foundation
 
 struct Constant {
     let shippingTermArray = ["FOB", "CIF"]
-    let currencyArray = ["CNY", "USD", "HKD"]
+    let currencyArray = ["CNY", "USD", "EUR", "AUD","JPY", "CAD", "HKD" ]
     let priceUnitArray = ["/M", "/YD", "/KG", "/Ton"]
-    let widthUnitArray = ["CM", "Inch"]
+    let widthUnitArray = ["CM", "INCH"]
     let weightUnitArray = ["GSM", "G/M", "G/YD"]
 }

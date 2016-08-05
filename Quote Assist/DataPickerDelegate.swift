@@ -75,12 +75,25 @@ extension InputViewController{
         
         switch (inputShippingTerm, outputShippingTerm) {
             case ("FOB","FOB"):
+            //No need for shipping cost, green light
             linesView.shippingTermLineLayer.strokeColor = UIColor.greenColor().CGColor
-            case ("FOB","CIF"):
-            linesView.shippingTermLineLayer.strokeColor = UIColor.redColor().CGColor
             
+            //Need shipping cost
+            case ("FOB","CIF"):
+                if appDelegate.unitShippingCost != 0 {
+                    
+                } else {
+                    print("no shipping cost provided, red line")
+                    linesView.shippingTermLineLayer.strokeColor = UIColor.redColor().CGColor
+                }
+            //Need shipping cost
             case ("CIF","FOB"):
-                linesView.shippingTermLineLayer.strokeColor = UIColor.redColor().CGColor
+                if appDelegate.unitShippingCost != 0 {
+                    
+                } else {
+                    print("no shipping cost provided, red line")
+                    linesView.shippingTermLineLayer.strokeColor = UIColor.redColor().CGColor
+            }
             case ("CIF","CIF"):
                 linesView.shippingTermLineLayer.strokeColor = UIColor.greenColor().CGColor
             default:

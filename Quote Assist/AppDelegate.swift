@@ -13,7 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var moreInfoAlertView: UIAlertController?
-
+    
+    //Initilize shipping cost
+    var unitShippingCost: Double = 0.0
+    var totalShippingCost: Double = 0.0
+    var totalShippingQty: Double = 0.0
+    
+    var currencyFactor: [String:String] = ["baseCurrency":"", "resultCurrency":"", "factor":"0"]
+    var goodsSpecsInfo: [String:String] = ["widthUnit":"", "weightUnit":"", "width":"0", "weight":"0"]
+    
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

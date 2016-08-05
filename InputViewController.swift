@@ -37,6 +37,7 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
     
     //View Object of StatusLinesView Class
     var linesView: StatusLinesView!
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +111,8 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UITextFieldDe
                 UIView.animateWithDuration(0.6){
                     self.moreInfoButton.transform = CGAffineTransformIdentity
                 }
-        })
+            }
+        )
 
         // Animate the drawing of the line over the course of 2 second
         linesView.animateLine(2)

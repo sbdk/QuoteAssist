@@ -17,6 +17,7 @@
 		BE1E200B1D4A994A00920D5F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E200A1D4A994A00920D5F /* Constant.swift */; };
 		BE1E200D1D4AB18400920D5F /* DataPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E200C1D4AB18400920D5F /* DataPickerDelegate.swift */; };
 		BE9F2BB41D53DA6B00BF9F2D /* GoodsSpecsPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F2BB31D53DA6B00BF9F2D /* GoodsSpecsPickerDelegate.swift */; };
+		BE9F2BB61D53DFC300BF9F2D /* PriceAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F2BB51D53DFC300BF9F2D /* PriceAlgorithm.swift */; };
 		BEE7F3C91D4C14AD008F5010 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE7F3C81D4C14AD008F5010 /* MoreInfoViewController.swift */; };
 		BEFD16D21D4FC29E002D759C /* StatusLinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFD16D11D4FC29E002D759C /* StatusLinesView.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		BE1E200A1D4A994A00920D5F /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BE1E200C1D4AB18400920D5F /* DataPickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPickerDelegate.swift; sourceTree = "<group>"; };
 		BE9F2BB31D53DA6B00BF9F2D /* GoodsSpecsPickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsSpecsPickerDelegate.swift; sourceTree = "<group>"; };
+		BE9F2BB51D53DFC300BF9F2D /* PriceAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceAlgorithm.swift; sourceTree = "<group>"; };
 		BEE7F3C81D4C14AD008F5010 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		BEFD16D11D4FC29E002D759C /* StatusLinesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLinesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				BE1E1FE61D4A803400920D5F /* Info.plist */,
 				BE1E200A1D4A994A00920D5F /* Constant.swift */,
 				BEFD16D11D4FC29E002D759C /* StatusLinesView.swift */,
+				BE9F2BB51D53DFC300BF9F2D /* PriceAlgorithm.swift */,
 			);
 			path = "Quote Assist";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE7F3C91D4C14AD008F5010 /* MoreInfoViewController.swift in Sources */,
+				BE9F2BB61D53DFC300BF9F2D /* PriceAlgorithm.swift in Sources */,
 				BE1E1FDB1D4A803400920D5F /* AppDelegate.swift in Sources */,
 				BE9F2BB41D53DA6B00BF9F2D /* GoodsSpecsPickerDelegate.swift in Sources */,
 				BE1E20091D4A985900920D5F /* InputViewController.swift in Sources */,
