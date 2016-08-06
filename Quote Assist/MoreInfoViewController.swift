@@ -43,6 +43,8 @@ class MoreInfoViewController: UITableViewController, UITextFieldDelegate, UIPick
         goodsWidthPicker.delegate = self
         goodsWeightPicker.delegate = self
         
+        tableView.sectionHeaderHeight = 30.0
+        
         //Set label's current text according to input & output dataPicker setting
         shippingQtyUnit.text = String(inputPriceUnit.characters.dropFirst())
         
@@ -92,6 +94,28 @@ class MoreInfoViewController: UITableViewController, UITextFieldDelegate, UIPick
         }
     }
     
+    //Custom section header
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 30.0))
+        let label = UILabel(frame: CGRect(x: 10, y: 0, width: tableView.frame.size.width, height: 30))
+        label.textColor = UIColor.whiteColor()
+        
+        switch section {
+        case 0:
+            label.text = "Shipping Cost"
+        case 1:
+            label.text = "Currency Factor"
+        case 2:
+            label.text = "Goods Specs"
+        default:
+            break
+        }
+        view.addSubview(label)
+        view.backgroundColor = UIColor.grayColor()
+        return view
+    }
+    
     
     //Help function for setup textField
     func configTextFields(textFieldSet:Set<UITextField>){
@@ -119,7 +143,7 @@ class MoreInfoViewController: UITableViewController, UITextFieldDelegate, UIPick
             textField.layer.borderColor = UIColor.lightGrayColor().CGColor
             
             if textField.doubleValue == 0 {
-                textField.backgroundColor = UIColor.orangeColor()
+                textField.textColor = UIColor.redColor()
             }
         }
     }
